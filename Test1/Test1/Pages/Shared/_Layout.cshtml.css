@@ -1,0 +1,149 @@
+﻿/* Navbar styling */
+a.navbar-brand {
+    white-space: normal;
+    text-align: center;
+    word-break: break-all;
+}
+
+a {
+    color: #0077cc;
+}
+
+/* Button styling */
+.btn-primary {
+    color: #fff;
+    background-color: #1b6ec2;
+    border-color: #1861ac;
+}
+
+/* Active nav link styling */
+.nav-pills .nav-link.active, .nav-pills .show > .nav-link {
+    color: #fff;
+    background-color: #1b6ec2;
+    border-color: #1861ac;
+}
+
+/* Border styles */
+.border-top {
+    border-top: 1px solid #e5e5e5;
+}
+
+.border-bottom {
+    border-bottom: 1px solid #e5e5e5;
+}
+
+/* Box shadow */
+.box-shadow {
+    box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05);
+}
+
+/* Accept policy button */
+button.accept-policy {
+    font-size: 1rem;
+    line-height: inherit;
+}
+
+/* Footer styling */
+footer {
+    background-color: #BBBDBF;
+    color: #fff;
+    padding: 40px 0;
+}
+
+    /* Footer columns */
+    footer .column {
+        padding: 0 15px;
+        margin-bottom: 30px;
+    }
+
+    /* Footer content text */
+    footer p {
+        font-size: 14px;
+        margin-bottom: 20px;
+    }
+
+    /* Footer links */
+    footer a {
+        color: #fff;
+        text-decoration: none;
+    }
+
+    /* Social media icons */
+    footer .social {
+        margin-top: 15px;
+    }
+
+        footer .social a {
+            color: #fff;
+            margin-right: 10px;
+            font-size: 18px;
+        }
+
+    /* Payment logos */
+    footer .payment-logo {
+        margin: 10px;
+        max-width: 60px;
+    }
+
+/* Right-aligned text */
+.right {
+    text-align: right;
+}
+
+/* Grey background for contact info */
+.contact-info {
+    background-color: #666;
+    padding: 10px 20px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+/* Icon alignment */
+.icon-container {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+/* Centered text for payment logos */
+.text-center {
+    text-align: center;
+}
+.custom-hamburger {
+    background-color: green;
+    border: none;
+    padding: 5px 10px; /* Adjust padding as needed */
+    border-radius: 4px;
+    position: absolute;
+    right: 20px; /* Adjust the position as needed */
+    top: 15px; /* Adjust the position as needed */
+}
+
+.custom-icon {
+    background-color: white;
+    display: inline-block;
+    width: 20px; /* Adjust the icon size as needed */
+    height: 2px;
+    margin: 3px 0;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+}
+
+    .custom-icon:before,
+    .custom-icon:after {
+        background-color: white;
+        content: "";
+        display: inline-block;
+        width: 40px; /* Adjust the icon size as needed */
+        height: 2px;
+        position: absolute;
+        transition: transform 0.3s ease-in-out;
+    }
+
+    .custom-icon:before {
+        top: -10px;
+    }
+
+    .custom-icon:after {
+        top: 6px;
+    }

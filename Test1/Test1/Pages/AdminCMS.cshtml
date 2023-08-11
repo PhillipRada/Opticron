@@ -1,0 +1,18 @@
+﻿@page
+@model Test1.Pages.AdminCMSModel
+@{
+}
+
+<h2>Admin CMS</h2>
+
+<form method="post">
+    <div class="form-group">
+        <label for="imagePath">Image Path</label>
+        <input type="text" class="form-control" id="imagePath" name="ImagePath" value="@Model.ImagePath">
+    </div>
+    <div class="form-group">
+        <label for="textContent">Text Content</label>
+        <textarea class="form-control" id="textContent" name="TextContent">@Model.TextContent</textarea>
+    </div>
+    <button type="submit" class="btn btn-primary">Save</button>
+</form>

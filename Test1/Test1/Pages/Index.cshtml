@@ -1,0 +1,159 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewData["Title"]</title>
+    <!-- Slick CSS -->
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.0/slick/slick.css" />
+    <!-- Slick Theme CSS -->
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css" />
+    <link rel="stylesheet" href="/css/index.css" />
+</head>
+
+<body>
+
+    <div id="carouselContainer" class="slick-carousel mt-4">
+        <div class="slick-inner">
+            <div>
+                <img src="~/lib/Images/Picture1.jpg" alt="Image 1" style="max-height: 400px; width: 100%; object-fit: cover;">
+            </div>
+            <div>
+                <img src="~/lib/Images/Picture2.jpg" alt="Image 2" style="max-height: 400px; width: 100%; object-fit: cover;">
+            </div>
+            <div>
+                <img src="~/lib/Images/Picture2.jpg" alt="Image 3" style="max-height: 400px; width: 100%; object-fit: cover;">
+            </div>
+            <div>
+                <img src="~/lib/Images/Picture2.jpg" alt="Image 4" style="max-height: 400px; width: 100%; object-fit: cover;">
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Proof that I have made the connection with SQL database -->
+    <div class="container mt-4 justify-content-center" ">
+        <div class="row">
+            <div class="col-md-12 text-center">
+                <div class="row justify-content-center">
+                    @foreach (var cardProduct in Model.CardProducts)
+                    {
+                        <div class="col-md-3 mb-4">
+                            <div class="card">
+                                <h4 class="card-header">@cardProduct.Title</h4>
+                                <img class="card-img-top" src="@cardProduct.ImagePath" alt="Card image cap">
+                                <div class="card-body">
+                                    <p class="card-text">@cardProduct.Description</p>
+                                </div>
+                                <div class="card-footer">
+                                    <button class="btn btn-success btn-block">@cardProduct.ButtonText</button>
+                                </div>
+                            </div>
+                        </div>
+                    }
+                </div>
+            </div>
+        </div>
+    </div>
+        <!-- Proof that I have made the connection with SQL database -->
+
+
+
+
+    <div class="grey-box">
+        <div class="container mt-4">
+            <h2 class="text-center my-4">Special Offers</h2>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="card">
+                        <img class="card-img-top" src="~/lib/Images/magnifier.jpg" alt="Card 1 Image">
+                        <div class="card-body">
+                            <p class="card-text">Some content for Card 1.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card">
+                        <img class="card-img-top" src="~/lib/Images/rangefiner.jpg" alt="Card 2 Image">
+                        <div class="card-body">
+                            <p class="card-text">Some content for Card 2.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card">
+                        <img class="card-img-top" src="~/lib/Images/specialoffers.jpg" alt="Card 3 Image">
+                        <div class="card-body">
+                            <p class="card-text">Some content for Card 3.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="wrapper text-center pt-4 pb-4">
+        <h2>Product Categories</h2>
+        <div class="carousel">
+            <div>
+                <a href="/category1"><img src="https://picsum.photos/300/200?random=1" alt="Category 1"></a>
+                <p>Description of Category 1</p>
+            </div>
+            <div>
+                <a href="/category2"><img src="https://picsum.photos/300/200?random=2" alt="Category 2"></a>
+                <p>Description of Category 2</p>
+            </div>
+            <div>
+                <a href="/category3"><img src="https://picsum.photos/300/200?random=3" alt="Category 3"></a>
+                <p>Description of Category 3</p>
+            </div>
+            <div>
+                <a href="/category4"><img src="https://picsum.photos/300/200?random=4" alt="Category 4"></a>
+                <p>Description of Category 4</p>
+            </div>
+            <div>
+                <a href="/category5"><img src="https://picsum.photos/300/200?random=5" alt="Category 5"></a>
+                <p>Description of Category 5</p>
+            </div>
+            <div>
+                <a href="/category6"><img src="https://picsum.photos/300/200?random=6" alt="Category 6"></a>
+                <p>Description of Category 6</p>
+            </div>
+        </div>
+    </div>
+
+    @section Scripts {
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <script type="text/javascript" src="//cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.0/slick/slick.min.js"></script>
+
+        <script>
+            $(document).ready(function () {
+                // Initialize the carousels
+                $('#carouselContainer .slick-inner').slick({
+                    dots: true,
+                    arrows: false,
+                    infinite: true,
+                    autoplay: true,
+                    autoplaySpeed: 3000,
+                    slidesToShow: 1,
+                    slidesToScroll: 1
+                });
+
+                // Initialize the second carousel
+                $('.carousel').slick({
+                    arrows: true,
+                    infinite: true,
+                    slidesToShow: 4,
+                    slidesToScroll: 1
+                });
+            });
+        </script>
+    }
+</body>
+</html>

@@ -1,0 +1,27 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.4.33213.308
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "OptiDatabase", "OptiDatabase\OptiDatabase.sqlproj", "{52B84708-73E4-4D4E-89F0-ED917B24E1FA}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{52B84708-73E4-4D4E-89F0-ED917B24E1FA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{52B84708-73E4-4D4E-89F0-ED917B24E1FA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{52B84708-73E4-4D4E-89F0-ED917B24E1FA}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{52B84708-73E4-4D4E-89F0-ED917B24E1FA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{52B84708-73E4-4D4E-89F0-ED917B24E1FA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{52B84708-73E4-4D4E-89F0-ED917B24E1FA}.Release|Any CPU.Deploy.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {2E5E2C54-41AD-4DA5-B196-A55FB797FADA}
+	EndGlobalSection
+EndGlobal

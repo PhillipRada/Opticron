@@ -1,0 +1,135 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - Test1</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/Test1.styles.css" asp-append-version="true" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
+
+
+</head>
+<body>
+    <header class="mb-0">
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom-0 box-shadow">
+            <div class="container pb-0">
+               
+                <div class="d-flex flex-column w-100">
+                    <a class="navbar-brand mb-3 h1" asp-area="" asp-page="/Index">
+                        <img src="~/lib/Images/header-logo.png" alt="Opticron Logo" width="150" height="auto">
+                        <button class="navbar-toggler custom-hamburger" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon custom-icon"></span>
+                        </button>
+                    </a>
+
+                    <div class="navbar-collapse collapse d-sm-inline-flex justify-content-start">
+                        <ul class="navbar-nav flex-grow-1">
+                            <li class="nav-item">
+                                <a class="nav-link text-dark" asp-area="" asp-page="/Products">Our Products</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-dark" asp-area="" asp-page="/Buy">Where To Buy</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-dark" asp-area="" asp-page="/News">News & Reviews</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-dark" asp-area="" asp-page="/Help">Help & Support</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-dark" asp-area="" asp-page="/Opticron">My Opticron</a>
+                            </li>
+                        </ul>
+                        <form class="d-flex ms-auto">
+                            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                            <button class="btn btn-outline-success" type="submit">Search</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+
+    <div class="container">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+
+    <footer class="w-100 py-4 flex-shrink-0 text-white">
+    <div class="container py-4">
+        <div class="row gy-4 gx-5">
+            <div class="col-lg-4 col-md-6">
+                <h6 class="text-white">
+                    Opticron Unit 21, Titan Court, Laporte Way, Luton, Bedfordshire, LU4 8EF, UK
+                    UK VAT registration number GB197550428.
+                </h6>
+                <a href="/newsletter" class="text-white">Sign Up For Emails</a> |
+                <a href="/help-support/send-feedback" class="text-white">Send Us Feedback</a> |
+                <a href="/about-us" class="text-white">About Us</a> |
+                <a href="/partnerships-programmes" class="text-white">Partnerships & Programmes</a> |
+                <a href="/terms-conditions" class="text-white">Terms Of Use</a> |
+                <a href="/delivery-terms" class="text-white">Shipping & Delivery</a> |
+                <a href="/returns-policy" class="text-white">Returns</a> |
+                <a href="/privacy-policy" class="text-white">Privacy Policy</a> |
+                <a href="/ethics-sustainability-diversity" class="text-white">Ethics, Sustainability & Diversity</a> |
+                <a href="/sitemap" class="text-white">Sitemap</a>
+            </div>
+            <div class="col-lg-4 col-md-6">
+               
+            </div>
+            <div class="col-lg-4 col-md-6">
+                <div class="mb-4">
+                    <h1 class="text-white">Call 01582 726522 </h1>
+                    <h3 class="text-white">Email Us sales@opticron.co.uk </h3>
+                </div>
+
+                <!-- Facebook -->
+                <a class="btn btn-link btn-floating btn-lg text-white m-1"
+                   href="#!"
+                   role="button"
+                   data-mdb-ripple-color="dark">
+                    <i class="fab fa-facebook-f"></i>
+                </a> |
+
+                <!-- Twitter -->
+                <a class="btn btn-link btn-floating btn-lg text-white m-1"
+                   href="#!"
+                   role="button"
+                   data-mdb-ripple-color="dark">
+                    <i class="fab fa-twitter"></i>
+                </a> |
+
+                <!-- Google -->
+                <a class="btn btn-link btn-floating btn-lg text-white m-1"
+                   href="#!"
+                   role="button"
+                   data-mdb-ripple-color="dark">
+                    <i class="fab fa-google"></i>
+                </a> |
+
+                <!-- Instagram -->
+                <a class="btn btn-link btn-floating btn-lg text-white m-1"
+                   href="#!"
+                   role="button"
+                   data-mdb-ripple-color="dark">
+                    <i class="fab fa-instagram"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>
